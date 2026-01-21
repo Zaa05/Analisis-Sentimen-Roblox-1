@@ -203,13 +203,13 @@ def load_model():
     """Load the trained model and vectorizer"""
     try:
         # Load model
-        model = joblib.load('models_3class/bnb_tfidf.pkl')
+        model = joblib.load('bnb_tfidf.pkl')
         
         # Load vectorizer
-        vectorizer = joblib.load('models_3class/tfidf_vectorizer.pkl')
+        vectorizer = joblib.load('tfidf_vectorizer.pkl')
         
         # Load label mapping
-        with open('models_3class/label_mapping.json', 'r', encoding='utf-8') as f:
+        with open('label_mapping.json', 'r', encoding='utf-8') as f:
             label_mapping = json.load(f)
         
         # Reverse mapping for display
